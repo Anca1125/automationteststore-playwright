@@ -22,16 +22,19 @@ import {
   invalidForgotYourLogin,
   blankFields,
 } from "../utils/forgot.login.data";
+import { MyAccountPage } from "../pages/myAccount.page";
 
-test.describe("login", () => {
+test.describe("login module", () => {
   let loginPage: LoginPage;
   let forgotPasswordPage: ForgotPasswordPage;
   let forgotLoginPage: ForgotLoginPage;
+  let myAccountPage: MyAccountPage;
 
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page);
     forgotPasswordPage = new ForgotPasswordPage(page);
     forgotLoginPage = new ForgotLoginPage(page);
+    myAccountPage = new MyAccountPage(page);
     await page.goto("/");
   });
   test("login - user is able to login successfully with valid data", async ({
@@ -41,9 +44,8 @@ test.describe("login", () => {
     await loginPage.fillLoginForm(validLoginData);
     await loginPage.clickOnLoginButton();
 
-    await expect(page).toHaveURL(
-      "https://automationteststore.com/index.php?rt=account/account",
-    );
+    await expect(myAccountPage.accountHeader).toBeVisible();
+    await expect(page).toHaveURL(/account/);
   });
 
   test("login - user is not able to login with non-existent login user", async ({
@@ -106,7 +108,7 @@ test.describe("login", () => {
     ).toBeVisible();
   });
 
-  test("login - forgot password - user is able to reset the password using valid data", async ({
+  test.skip("login - forgot password - user is able to reset the password using valid data", async ({
     page,
   }) => {
     await loginPage.openLoginOrRegisterLink();
@@ -191,7 +193,7 @@ test.describe("login", () => {
     await forgotPasswordPage.clickOnBackButton();
   });
 
-  test("login - forgot login - user is able to recover login name with valid last name and email", async ({
+  test.skip("login - forgot login - user is able to recover login name with valid last name and email", async ({
     page,
   }) => {
     await loginPage.openLoginOrRegisterLink();

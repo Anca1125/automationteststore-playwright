@@ -4,8 +4,8 @@ export interface LoginUser {
 }
 
 export const validLoginData: LoginUser = {
-  username: "EcaterinaL",
-  password: "Ecaterina1!",
+  username: "AncaEcaterina",
+  password: "Ecaterina3@",
 };
 
 export const invalidLoginData = {

@@ -1,28 +1,75 @@
-🛍 Automation Test Store – E2E Automation Project
-👩‍💻 Author: Anca Nechita – Junior QA Automation Engineer
+# 🛍 Automation Test Store – E2E Automation Project
 
-📌 About This Project
+**Author:** Anca Nechita – Junior QA Automation Engineer
 
-This project represents an end-to-end automation testing solution for the Automation Test Store demo e-commerce application.
-It focuses on validating core user flows, identifying business logic defects, and applying structured test design techniques in real-world scenarios.
-The automation suite simulates real customer behavior from product browsing to order confirmation.
+🚧 **Project status:** In progress – additional test modules will be added
 
-🎯 What This Project Demonstrates
+---
 
-- Structured E2E test automation
-- Clean Page Object Model architecture
-- Realistic negative and edge case testing
-- Boundary Value Analysis (BVA)
-- Equivalence Partitioning (EP)
-- Defect identification and documentation
+## 📌 About This Project
 
-This project reflects practical QA thinking rather than only happy-path automation.
+This project represents an **end-to-end automation testing solution** for the demo e-commerce platform **Automation Test Store**.
 
-🧪 Key Tested Flows
+The goal of this project is to demonstrate practical QA automation skills, including:
 
-- User registration and authentication
-- Product search and browsing
-- Quantity validation (including negative and extreme values)
-- Cart updates and total calculation
-- Shipping estimation and coupon application
-- Complete checkout flow
+- building a scalable automation framework
+- validating critical user flows
+- applying structured test design techniques
+- identifying potential defects in application behavior
+
+The automation suite simulates real user journeys, from **login and account management to cart and checkout functionality**.
+
+---
+
+## 🧪 Key Tested Flows
+
+The automated tests cover the following areas:
+
+### Authentication
+
+- user login
+- login validation with invalid credentials
+- edge cases (blank fields, special characters)
+
+### Account Management
+
+- edit account details
+- change password
+- manage address book
+  - edit address
+  - add new address
+  - delete address
+
+### Shopping Functionality
+
+- product browsing
+- cart updates
+- quantity validation
+- coupon application
+- shipping estimation
+
+### Checkout Flow
+
+- complete purchase journey
+- order confirmation validation
+
+---
+
+## 🧠 Test Design Techniques Used
+
+The test scenarios were designed using standard QA techniques:
+
+- **Equivalence Partitioning (EP)**
+- **Boundary Value Analysis (BVA)**
+- **Negative Testing**
+- **Edge Case Testing**
+
+These techniques help ensure coverage of both **valid and invalid user behavior**.
+
+---
+
+## 🏗 Test Architecture
+
+The project follows a **Page Object Model (POM)** structure to ensure maintainability and readability.
+
+### Project structure

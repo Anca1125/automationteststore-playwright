@@ -1,75 +1,111 @@
 # 🛍 Automation Test Store – E2E Automation Project
 
-**Author:** Anca Nechita – Junior QA Automation Engineer
-
-🚧 **Project status:** In progress – additional test modules will be added
+**Author:** Anca Nechita
 
 ---
 
-## 📌 About This Project
+## 📌 About
 
-This project represents an **end-to-end automation testing solution** for the demo e-commerce platform **Automation Test Store**.
+This is an automation testing project for an e-commerce demo website, built using Playwright and TypeScript.
 
-The goal of this project is to demonstrate practical QA automation skills, including:
-
-- building a scalable automation framework
-- validating critical user flows
-- applying structured test design techniques
-- identifying potential defects in application behavior
-
-The automation suite simulates real user journeys, from **login and account management to cart and checkout functionality**.
+The goal of the project was to practice QA automation and test the main flows of an online store.
 
 ---
 
-## 🧪 Key Tested Flows
+## 🚀 What is tested
 
-The automated tests cover the following areas:
+The project includes tests for:
 
-### Authentication
+- homepage
+- login
+- product page
+- cart
+- checkout
+- my account
 
-- user login
-- login validation with invalid credentials
-- edge cases (blank fields, special characters)
+---
 
-### Account Management
+## 🧪 Test scenarios
 
+### Homepage
+
+- navigation through categories
+- opening products from homepage
+- using search (basic and advanced search)
+- selecting currency
+- accessing cart and checkout from menu
+
+### Login
+
+- valid login
+- invalid login
+- blank fields
+- special characters
+
+### Product & Cart
+
+- add product to cart
+- update quantity
+- basic validations
+
+### Checkout
+
+- guest checkout
+- logged user checkout
+- negative cases:
+  - missing email
+  - missing address
+  - empty cart
+
+### My Account
+
+- access account dashboard
 - edit account details
 - change password
-- manage address book
-  - edit address
-  - add new address
-  - delete address
-
-### Shopping Functionality
-
-- product browsing
-- cart updates
-- quantity validation
-- coupon application
-- shipping estimation
-
-### Checkout Flow
-
-- complete purchase journey
-- order confirmation validation
+- manage address book (add, edit, delete)
 
 ---
 
-## 🧠 Test Design Techniques Used
+## 🧠 Test approach
 
-The test scenarios were designed using standard QA techniques:
+Basic testing techniques used:
 
-- **Equivalence Partitioning (EP)**
-- **Boundary Value Analysis (BVA)**
-- **Negative Testing**
-- **Edge Case Testing**
-
-These techniques help ensure coverage of both **valid and invalid user behavior**.
+- equivalence partitioning
+- boundary value analysis
+- negative testing
+- edge cases
 
 ---
 
-## 🏗 Test Architecture
+## 🏗 Structure
 
-The project follows a **Page Object Model (POM)** structure to ensure maintainability and readability.
+The project is organized using Page Object Model (POM), so tests are easier to read and maintain.
 
-### Project structure
+---
+
+## ⚙️ Tech stack
+
+- Playwright
+- TypeScript
+- GitHub
+
+---
+
+## 🔁 CI
+
+Tests are running automatically with GitHub Actions when a Pull Request is created.
+
+---
+
+## ▶️ Run tests
+
+```bash
+npm install
+npx playwright test
+```
+
+---
+
+## 📎 Notes
+
+This project was created for practice and learning QA automation.
